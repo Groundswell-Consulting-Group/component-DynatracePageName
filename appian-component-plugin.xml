@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appian-component-plugin name="Component Plug-in Dynatrace Page Action Names" key="com.groundswellcg.plugins.DynatracePageName">
+    <plugin-info>
+        <description>Component used to set a User Action Name in a page using the data-dtname attribute in Dynatrace</description>
+        <vendor name="Groundswell" url="https://www.gswell.com"/>
+        <support supported="false" phone="xxx-xxx-xxxx" email="solutions@gswell.com" url="https://www.gswell.com"/>
+        <version>1.0</version>
+    </plugin-info>
+
+    <component rule-name="dynatraceUserPage" version="1.0.0">
+        <sdk-version>2.0.0</sdk-version>
+        <icon-name>dynatraceUserPage.svg</icon-name>
+        <parameter>
+            <name>pageName</name>
+            <category>input-only</category>
+            <type>Text</type>
+        </parameter>
+        <html-entry-point>index.html</html-entry-point>
+        <supported-user-agents>chrome firefox ie11 edge safari mobile</supported-user-agents>
+    </component>
+</appian-component-plugin>

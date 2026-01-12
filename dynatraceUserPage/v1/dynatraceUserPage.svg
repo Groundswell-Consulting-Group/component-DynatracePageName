@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-label="Appian Dynatrace Icon">
+    <!-- Appian: component container -->
+    <rect x="2" y="2" width="12" height="12" rx="2" ry="2" fill="none" stroke="#0B5FFF" stroke-width="2"/>
+
+    <!-- Dynatrace: tag -->
+    <path d="M12 9h6l3 3-3 3h-6z" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linejoin="round"/>
+
+    <!-- Tag hole -->
+    <circle cx="14" cy="12" r="1" fill="none" stroke="#2DD4BF" stroke-width="2"/>
+
+    <!-- Dynatrace: split diamonds -->
+    <path d="M16.5 10.5l1.5 1.5-1.5 1.5-1.5-1.5z" fill="#2DD4BF"/>
+    <path d="M19 10.5l1.5 1.5-1.5 1.5-1.5-1.5z" fill="#2DD4BF"/>
+</svg>
