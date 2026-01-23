@@ -1,20 +1,24 @@
+<meta name="mobile-web-app-capable" content="yes">
 
 <script src='APPIAN_JS_SDK_URI'></script>
 <script>
     Appian.Component.onNewValue(function (newValues) {
 
       // Format and display the pageNameField parameter
-      let pageName = newValues.pageName;
-      let pageNameField = document.getElementById('pageNameField');
-      let labelField = document.getElementById('dynatrace');
-        // Set visible value
+      const  pageName = newValues.pageName;
+      const  pageNameField = document.getElementById('pageNameField');
+      const  labelField = document.getElementById('dynatrace');
+      if (!pageName || !pageNameField || !labelField) return;
+
+      // Set visible value
       pageNameField.value = pageName;
-      labelField.value = pageName
+      labelField.innerText = pageName
 
       // Set Dynatrace tag (data-dtname)
       pageNameField.setAttribute("data-dtname", pageName);
+      labelField.dataset.dtname = pageName;
 
     });
 </script>
-<!--<label id="dynatrace"> </label> -->
+<label id="dynatrace" data-dtname=""> </label>
 <input data-dtname="" type="hidden" id='pageNameField'>

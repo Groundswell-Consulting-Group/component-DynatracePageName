@@ -4,7 +4,7 @@
         <description>Component used to set a User Action Name in a page using the data-dtname attribute in Dynatrace</description>
         <vendor name="Groundswell" url="https://www.gswell.com"/>
         <support supported="false" phone="xxx-xxx-xxxx" email="solutions@gswell.com" url="https://www.gswell.com"/>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
     </plugin-info>
 
     <component rule-name="dynatraceUserPage" version="1.0.0">
