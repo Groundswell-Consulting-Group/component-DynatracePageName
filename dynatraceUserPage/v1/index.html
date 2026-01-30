@@ -6,9 +6,11 @@
 
       // Format and display the pageNameField parameter
       const  pageName = newValues.pageName;
+      const scriptUrl = newValues.scriptUrl;
       const  pageNameField = document.getElementById('pageNameField');
       const  labelField = document.getElementById('dynatrace');
-      if (!pageName || !pageNameField || !labelField) return;
+
+      if (!pageName || !pageNameField || !labelField || !scriptUrl) return;
 
       // Set visible value
       pageNameField.value = pageName;
@@ -18,7 +20,29 @@
       pageNameField.setAttribute("data-dtname", pageName);
       labelField.dataset.dtname = pageName;
 
+     // Inject dynamic script ONLY once
+        if (scriptUrl && !document.querySelector(`script[src="${scriptUrl}"]`)) {
+          const template = document.getElementById("dynatraceTemplate");
+          const scriptNode = document.getElementById("dynatraceScript");
+          template.content.firstElementChild.src = scriptUrl;
+          scriptNode.src = scriptUrl;
+
+        }
     });
+</script>
+<!-- Template placeholder -->
+<template id="dynatraceTemplate">
+    <script type="text/javascript" crossorigin="anonymous"></script>
+</template>
+<!-- Insert Script -->
+
+<script id="dynatraceScript" type="text/javascript" crossorigin="anonymous"></script>
+
+<!-- Static local script -->
+<script type="text/javascript">
+    function sendUserData() {
+      // implementation
+    }
 </script>
 <label id="dynatrace" data-dtname=""> </label>
 <input data-dtname="" type="hidden" id='pageNameField'>
